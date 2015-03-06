@@ -1,0 +1,2 @@
+module ProdutTypesHelper
+end

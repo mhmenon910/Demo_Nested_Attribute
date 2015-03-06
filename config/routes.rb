@@ -1,4 +1,9 @@
 Myapp::Application.routes.draw do
+  resources :produt_types
+
+  resources :products
+
+  devise_for :users
   resources :cats
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,27 @@
+<h1>Listing produt_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @produt_types.each do |produt_type| %>
+      <tr>
+        <td><%= produt_type.name %></td>
+        <td><%= link_to 'Show', produt_type %></td>
+        <td><%= link_to 'Edit', edit_produt_type_path(produt_type) %></td>
+        <td><%= link_to 'Destroy', produt_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Produt type', new_produt_type_path %>

@@ -1,3 +1,22 @@
 class Cat < ActiveRecord::Base
-validate_presence_of :name
+validates_presence_of :name
+attr_accessor :sample
+def cat_name
+    if self.new_record?
+      "no name for your cat yet"
+    else
+      self.name unless self.blank?
+    end
+end
+
+
+def sample
+
+end
+
+def sample=(name)
+ puts "hi manoj"
+self.age =20
+end
+
 end

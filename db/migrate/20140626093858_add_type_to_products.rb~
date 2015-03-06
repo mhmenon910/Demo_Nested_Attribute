@@ -1,0 +1,6 @@
+class AddTypeToProducts < ActiveRecord::Migration
+  def change
+    add_column :products, :prodct_type_id, :integer
+    add_column :products, :properties, :text
+  end
+end
