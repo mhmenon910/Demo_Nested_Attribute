@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
   belongs_to :produt_type
   serialize :properties, Hash
-validate :validate_properties
+  validate :validate_properties
   
   def validate_properties
     produt_type.fields.each do |field|
