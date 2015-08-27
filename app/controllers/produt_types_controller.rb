@@ -68,10 +68,10 @@ class ProdutTypesController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def produt_type_params
-   #   params.require(:produt_type).permit(:name)
- params.require(:produt_type).permit(:name).tap do |whitelisted|
-        whitelisted[:fields_attributes] = params[:produt_type][:fields_attributes]
-      end
+  def produt_type_params
+   #params.require(:produt_type).permit(:name)
+    params.require(:produt_type).permit(:name).tap do |whitelisted|
+      whitelisted[:fields_attributes] = params[:produt_type][:fields_attributes]
     end
+  end
 end
